@@ -1,3 +1,4 @@
+//Clase (molde) para objeto del ave
 class Bird {
     constructor(x, y) { //Constructor con argumentos fijos 
         var options = {//Opciones del motor físico para el objeto
@@ -9,6 +10,7 @@ class Bird {
         this.body = Bodies.rectangle(x, y, 50, 50, options);
         this.width = 50;
         this.height = 50;
+        
         //Agregamos este objeto al mundo que estamos creando
         World.add(world, this.body);
       }

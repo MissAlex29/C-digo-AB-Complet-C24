@@ -1,9 +1,11 @@
-//Objetos de la bibluoteca matter 
+//Objetos de la biblioteca matter 
 const Engine = Matter.Engine;//Almacena otor físico 
 const World= Matter.World;//Crea mundo físico y agrega objetos
 const Bodies = Matter.Bodies;//Crea los objetos físicos que habitan el mundo
+
 //Variables para almacenar objetos matter
 var engine, world;
+
 //Variables para objetos del juego
 var box1,box2,box3,box4,box5;
 var ground;
@@ -16,6 +18,7 @@ function setup(){
 
     engine = Engine.create(); //Creamos motor físico
     world = engine.world;//Nombramos el mundo usando el motor físico
+    
     //Asignamos clase (moldes) a cada variable
     ground = new Ground(600,height,1200,20);
     box1 = new Box(700,320,70,70);
@@ -36,12 +39,15 @@ function setup(){
 
 function draw(){
     background(0);
+    
     //Actualizamos motor físico 
     Engine.update(engine);
+    
     //Mostramos atributos del objeto en consola 
     console.log(box2.body.position.x);
     console.log(box2.body.position.y);
     console.log(box2.body.angle);
+    
     //Llamamos función "mostrar" para visualizar los objetos
     box1.display();
     box2.display();

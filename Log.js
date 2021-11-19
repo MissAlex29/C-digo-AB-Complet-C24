@@ -1,3 +1,4 @@
+//Clase (molde) para objeto de la madera
 class Log {
     constructor(x, y, height, angle) { //Constructor con argumentos 
         var options = {//Opciones del motor físico para el objeto
@@ -9,8 +10,10 @@ class Log {
         this.body = Bodies.rectangle(x, y, 20, height, options);
         this.width = 20;
         this.height = height;
+        
         //establecemos angulo del objeto
         Matter.Body.setAngle(this.body, angle);
+        
         //Agregamos este objeto al mundo que estamos creando
         World.add(world, this.body);
       }
